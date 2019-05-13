@@ -9,9 +9,9 @@ public class CaixaEletornico {
     List<Cedula> listaDeCedulas = new ArrayList<Cedula>();
 
     public CaixaEletornico(int valorASacar) {
-        this.listaDeCedulas.add(new Cedula(50, 2));
-        this.listaDeCedulas.add(new Cedula(10, 2));
-        this.listaDeCedulas.add(new Cedula(5, 2));
+        this.listaDeCedulas.add(new Cedula(50, 50));
+        this.listaDeCedulas.add(new Cedula(10, 50));
+        this.listaDeCedulas.add(new Cedula(5, 50));
         this.valorASacar = valorASacar;
         this.contadorDeNotas = contadorDeNotas;
         this.moeda = moeda;
@@ -21,7 +21,7 @@ public class CaixaEletornico {
         if (valorASacar % 5 == 0)
             verificacaoDeNotas();
         else
-            System.out.print("Opa só temos notas multiplas de 5, por favor realize um novo saque");
+            System.out.print("Opa só temos notas multiplas de 5, por favor realize um novo saque\n");
     }
 
     public void valorASacar(String moeda) {
