@@ -19,7 +19,7 @@ public class CaixaEletornico {
 
     public void valorASacar() {
         if (valorASacar % 5 == 0)
-            verificacaoDeNotas();
+            verificacaoDeCedulas();
         else
             System.out.print("Opa só temos notas multiplas de 5, por favor realize um novo saque\n");
     }
@@ -27,11 +27,11 @@ public class CaixaEletornico {
     public void valorASacar(String moeda) {
         if (moeda == "Dolar") {
             this.valorASacar = this.valorASacar / 3.96;
-            verificacaoDeNotas();
+            verificacaoDeCedulas();
         }
     }
 
-    private void verificacaoDeNotas() {
+    private void verificacaoDeCedulas() {
         for (int i = 0; i < listaDeCedulas.size(); i++) {
             int valorDaCedula = listaDeCedulas.get(i).getValorDaCedula();
             contadorDeNotas = 0;
